@@ -1,0 +1,13 @@
+# Rust
+/target
+Cargo.lock
+
+# Fichiers secrets SecureVault - NE JAMAIS POUSSER
+*.vault
+*.vault.tmp
+*.audit
+.env
+
+# Windows
+Thumbs.db
+desktop.ini
