@@ -50,13 +50,13 @@ pub fn load_vault(
         ));
     }
 
-    let version = u16::from_le_bytes([data[4], data[5]]);
+    let version = u16::from_le_bytes([data[4], data[5]]);  
     if version != VERSION {
         return Err(VaultError::CorruptedVault(
             format!("Version {} non supportée", version)
         ));
-    }
-
+    } 
+   
     let mut salt = [0u8; SALT_LEN];
     salt.copy_from_slice(&data[6..6 + SALT_LEN]);
 
